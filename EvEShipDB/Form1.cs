@@ -28,11 +28,6 @@ namespace EvEShipDB
             InitializeComponent();
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void inputBox_TextChanged(object sender, EventArgs e)
         {
             if(this.shipsList.SelectedRows.Count == 0)
@@ -57,8 +52,8 @@ namespace EvEShipDB
                     continue;
                 }
 
-                string name = attr[0].Replace(",", "");
-                string value = attr[1].Replace(",", "");
+                string name = attr[0].Replace(",", "").Replace("\r", "");
+                string value = attr[1].Replace(",", "").Replace("\r", "");
 
                 setAttributeInGrid(name, value, selectedElement);
             }
@@ -99,7 +94,7 @@ namespace EvEShipDB
             foreach (string lines in data.Skip(1))
             {
                 //string[] attributes = lines.Split(',');
-                string[] attributes = lines.Split(',').Select(p => p.Replace(",", "")).ToArray();
+                string[] attributes = lines.Split(',').Select(p => p.Replace(",", "").Replace("\r", "")).ToArray();
 
                 dataSource.Rows.Add(attributes);
             }
@@ -156,6 +151,15 @@ namespace EvEShipDB
             if (row != null)
             {
                 setAttributeInGrid("Tech", techEditBox.Text, row);
+            }
+        }
+
+        private void factionEditBox_TextChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow row = getCurrentRow();
+            if (row != null)
+            {
+                setAttributeInGrid("Faction", factionEditBox.Text, row);
             }
         }
 

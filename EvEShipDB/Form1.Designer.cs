@@ -41,6 +41,8 @@
             this.loadButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.factionEditBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shipsList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             this.shipsList.Name = "shipsList";
             this.shipsList.ReadOnly = true;
             this.shipsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.shipsList.Size = new System.Drawing.Size(930, 150);
+            this.shipsList.Size = new System.Drawing.Size(1270, 520);
             this.shipsList.TabIndex = 0;
             // 
             // inputBox
@@ -63,16 +65,16 @@
             this.inputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputBox.Location = new System.Drawing.Point(12, 340);
+            this.inputBox.Location = new System.Drawing.Point(12, 622);
             this.inputBox.Multiline = true;
             this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(930, 150);
+            this.inputBox.Size = new System.Drawing.Size(1270, 234);
             this.inputBox.TabIndex = 1;
             this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
             // 
             // nameEditBox
             // 
-            this.nameEditBox.Location = new System.Drawing.Point(53, 173);
+            this.nameEditBox.Location = new System.Drawing.Point(49, 563);
             this.nameEditBox.Name = "nameEditBox";
             this.nameEditBox.Size = new System.Drawing.Size(100, 20);
             this.nameEditBox.TabIndex = 2;
@@ -81,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 176);
+            this.label1.Location = new System.Drawing.Point(8, 566);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
@@ -90,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 176);
+            this.label2.Location = new System.Drawing.Point(153, 566);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 5;
@@ -98,7 +100,7 @@
             // 
             // classEditBox
             // 
-            this.classEditBox.Location = new System.Drawing.Point(195, 172);
+            this.classEditBox.Location = new System.Drawing.Point(201, 564);
             this.classEditBox.Name = "classEditBox";
             this.classEditBox.Size = new System.Drawing.Size(100, 20);
             this.classEditBox.TabIndex = 4;
@@ -107,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(303, 176);
+            this.label3.Location = new System.Drawing.Point(11, 593);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 7;
@@ -115,7 +117,7 @@
             // 
             // techEditBox
             // 
-            this.techEditBox.Location = new System.Drawing.Point(341, 173);
+            this.techEditBox.Location = new System.Drawing.Point(49, 590);
             this.techEditBox.Name = "techEditBox";
             this.techEditBox.Size = new System.Drawing.Size(100, 20);
             this.techEditBox.TabIndex = 6;
@@ -123,7 +125,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(450, 170);
+            this.addButton.Location = new System.Drawing.Point(446, 560);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 8;
@@ -133,7 +135,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(531, 170);
+            this.deleteButton.Location = new System.Drawing.Point(527, 560);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 9;
@@ -144,7 +146,7 @@
             // loadButton
             // 
             this.loadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.loadButton.Location = new System.Drawing.Point(867, 168);
+            this.loadButton.Location = new System.Drawing.Point(1203, 558);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(75, 23);
             this.loadButton.TabIndex = 10;
@@ -155,7 +157,7 @@
             // saveButton
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButton.Location = new System.Drawing.Point(867, 197);
+            this.saveButton.Location = new System.Drawing.Point(1203, 587);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 11;
@@ -165,7 +167,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(612, 170);
+            this.clearButton.Location = new System.Drawing.Point(608, 560);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 12;
@@ -173,11 +175,30 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(153, 593);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Faction";
+            // 
+            // factionEditBox
+            // 
+            this.factionEditBox.Location = new System.Drawing.Point(201, 590);
+            this.factionEditBox.Name = "factionEditBox";
+            this.factionEditBox.Size = new System.Drawing.Size(100, 20);
+            this.factionEditBox.TabIndex = 14;
+            this.factionEditBox.TextChanged += new System.EventHandler(this.factionEditBox_TextChanged);
+            // 
             // databaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 502);
+            this.ClientSize = new System.Drawing.Size(1294, 868);
+            this.Controls.Add(this.factionEditBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.loadButton);
@@ -214,6 +235,8 @@
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox factionEditBox;
     }
 }
 
